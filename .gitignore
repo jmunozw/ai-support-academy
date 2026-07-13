@@ -1,0 +1,32 @@
+```gitignore
+# Variables de entorno y secretos
+.env
+.env.*
+!.env.example
+secrets/
+*.key
+*.pem
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+
+# Node
+node_modules/
+
+# Logs y resultados temporales
+*.log
+logs/
+temp/
+tmp/
+
+# Editores
+.vscode/
+.idea/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
