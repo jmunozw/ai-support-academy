@@ -58,7 +58,7 @@ Cada concepto debe producir alguna evidencia:
 
 | Fase | Contenido | Estado |
 |---|---|---|
-| A0 | Organización del proyecto | En progreso |
+| A0 | Organización del proyecto | Completada |
 | A1 | Fundamentos de IA | Pendiente |
 | A2 | HTTP, APIs y JSON | Pendiente |
 | A3 | Python para AI Support | Pendiente |
@@ -118,7 +118,7 @@ AI-Support-Academy/
 - [x] Primer Learning Log creado
 - [x] Sistema documental completado
 - [x] Rutina semanal registrada
-- [ ] Repositorio publicado en GitHub
+- [x] Repositorio publicado en GitHub
 
 ## Autor
 

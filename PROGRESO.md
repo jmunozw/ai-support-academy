@@ -10,7 +10,7 @@
 
 | Fase | Contenido | Estado | Progreso |
 |---|---|---:|---:|
-| A0 | Organización del proyecto | En progreso | 90% |
+| A0 | Organización del proyecto | En progreso | 100% |
 | A1 | Fundamentos de IA | Iniciada | Clase 1 completada |
 | A2 | HTTP, APIs y JSON | Pendiente | 0% |
 | A3 | Python para AI Support | Pendiente | 0% |
@@ -37,8 +37,8 @@
 - [x] Roadmap incorporado al repositorio
 - [x] Learning Log incorporado
 - [x] Plantillas documentales preparadas
-- [ ] Primer commit realizado
-- [ ] Repositorio publicado en GitHub
+- [x] Primer commit realizado
+- [x] Repositorio publicado en GitHub
 
 ---
 
@@ -111,10 +111,8 @@ Cada viernes responderé:
 
 ## Próxima acción
 
-Completar la Fase A0:
+Comenzar la **Fase A1 — Fundamentos de IA**:
 
-1. Incorporar el roadmap.
-2. Recuperar el Learning Log de la Clase 1.
-3. Preparar las plantillas.
-4. Realizar el primer commit.
-5. Publicar el repositorio en GitHub.
+1. Clase 02 — Qué es realmente la Inteligencia Artificial.
+2. Diferenciar IA, Machine Learning, modelos y LLM.
+3. Crear la siguiente entrada del Learning Log.
