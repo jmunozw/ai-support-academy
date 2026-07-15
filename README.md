@@ -59,7 +59,7 @@ Cada concepto debe producir alguna evidencia:
 | Fase | Contenido | Estado |
 |---|---|---|
 | A0 | Organización del proyecto | Completada |
-| A1 | Fundamentos de IA | Pendiente |
+| A1 | Fundamentos de IA | En progreso — Clase 02 completada |
 | A2 | HTTP, APIs y JSON | Pendiente |
 | A3 | Python para AI Support | Pendiente |
 | A4 | Prompt Engineering operativo | Pendiente |
@@ -71,6 +71,33 @@ Cada concepto debe producir alguna evidencia:
 | A10 | Portfolio profesional | Continuo |
 
 La planificación completa está disponible en [`00-roadmap/ROADMAP.md`](00-roadmap/ROADMAP.md).
+
+## Avance actual
+
+**Fase actual:** A1 — Fundamentos de IA  
+**Último hito:** Clase 02 completada y consolidada  
+**Próxima actividad:** Clase 03 — Laboratorio de comparación y evaluación de respuestas de IA
+
+Resultados de la Clase 02:
+
+- Mini test final: **5/5**
+- Test avanzado: **27/30**
+- Responsabilidades de componentes: **6/6**
+- Localización de fallos: **6/6**
+- Caso final de generación y validación: resuelto
+
+Mapa operativo aprendido:
+
+> Embedding representa → Recuperador localiza → Aplicación construye el contexto → LLM genera → Validador comprueba.
+
+## Documentación destacada
+
+- [Progreso general](PROGRESO.md)
+- [Learning Log](AI-Support-Learning-Log.md)
+- [Fase A1 — Fundamentos de IA](01-fundamentos-ia/README.md)
+- [Clase 02 — Qué es realmente la Inteligencia Artificial](01-fundamentos-ia/clases/Clase-02-Que-es-realmente-la-Inteligencia-Artificial.md)
+- [Infografía de la Clase 01](01-fundamentos-ia/evidencias/Infografia-Clase-01-De-Soporte-IT-a-IA-Support.png)
+- [Infografía de la Clase 02](01-fundamentos-ia/evidencias/Infografia-Clase-02-Fundamentos-IA.png)
 
 ## Proyectos previstos
 
@@ -102,7 +129,8 @@ AI-Support-Academy/
 ├── proyectos/
 ├── recursos/
 ├── AI-Support-Learning-Log.md
-└── PROGRESO.md
+├── PROGRESO.md
+└── README.md
 ```
 
 ## Regla de documentación
@@ -114,11 +142,16 @@ AI-Support-Academy/
 - [x] Identidad del proyecto definida
 - [x] Perfil profesional objetivo definido
 - [x] Roadmap profesional creado
-- [x] Primera clase completada
-- [x] Primer Learning Log creado
-- [x] Sistema documental completado
+- [x] Fase A0 completada
+- [x] Clase 01 completada
+- [x] Clase 02 completada y consolidada
+- [x] Learning Log actualizado
+- [x] Infografías de las clases 01 y 02 incorporadas
+- [x] Test avanzado de la Clase 02 completado
+- [x] Sistema documental preparado
 - [x] Rutina semanal registrada
 - [x] Repositorio publicado en GitHub
+- [ ] Clase 03 — Laboratorio de evaluación de respuestas
 
 ## Autor
 

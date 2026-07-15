@@ -10,8 +10,8 @@
 
 | Fase | Contenido | Estado | Progreso |
 |---|---|---:|---:|
-| A0 | Organización del proyecto | En progreso | 100% |
-| A1 | Fundamentos de IA | Iniciada | Clase 1 completada |
+| A0 | Organización del proyecto | Completada | 100% |
+| A1 | Fundamentos de IA | En progreso | Clase 02 completada y consolidada |
 | A2 | HTTP, APIs y JSON | Pendiente | 0% |
 | A3 | Python para AI Support | Pendiente | 0% |
 | A4 | Prompt Engineering operativo | Pendiente | 0% |
@@ -39,6 +39,37 @@
 - [x] Plantillas documentales preparadas
 - [x] Primer commit realizado
 - [x] Repositorio publicado en GitHub
+
+---
+
+## Fase A1 — Estado actual
+
+### Clase 02 — Qué es realmente la Inteligencia Artificial
+
+**Estado:** completada y consolidada.
+
+Conceptos introducidos:
+
+- automatización, IA, Machine Learning, IA generativa y LLM;
+- diferencia entre modelo y aplicación;
+- entrenamiento e inferencia;
+- tokens, ventana de contexto y temperatura;
+- embeddings, fragmentos e indexación;
+- RAG y fine-tuning;
+- contexto, generación y validación;
+- alucinaciones y diagnóstico por capas.
+
+Resultados de consolidación:
+
+- mini test final: **5/5**;
+- test avanzado: **27/30**;
+- asociación de componentes y responsabilidades: **6/6**;
+- localización de fallos por capas: **6/6**;
+- caso final de generación y validación: resuelto.
+
+Idea operativa consolidada:
+
+> El error se origina en la capa de generación del LLM. Llega al usuario porque falla la validación.
 
 ---
 
@@ -71,14 +102,14 @@ El horario de 13:00 a 14:00 queda como margen disponible para otras formaciones,
 
 Una sesión estará completada cuando exista al menos una evidencia:
 
-- Nota técnica
-- Ejercicio resuelto
-- Laboratorio documentado
-- Ticket diagnosticado
-- Código funcional
-- Captura o resultado verificable
-- Actualización del Learning Log
-- Commit en Git
+- nota técnica;
+- ejercicio resuelto;
+- laboratorio documentado;
+- ticket diagnosticado;
+- código funcional;
+- captura o resultado verificable;
+- actualización del Learning Log;
+- commit en Git.
 
 No será necesario producir todas las evidencias en cada sesión.
 
@@ -86,13 +117,17 @@ No será necesario producir todas las evidencias en cada sesión.
 
 ## Evidencias actuales
 
-| Fecha | Fase | Evidencia | Estado |
+| Fecha | Fase | Evidencia | Estado o resultado |
 |---|---|---|---|
-| 13/07/2026 | A1 | Fundamentos de IA | Pendiente | 0% |
-| 13/07/2026 | A1 | Declaración profesional inicial | Completada |
-| 13/07/2026 | A1 | Mapa inicial de competencias | Completado |
-| 13/07/2026 | A1 | Mini test de la Clase 1 | 4/4 |
-| 13/07/2026 | A0 | Estructura del repositorio | Completada |
+| 13/07/2026 | A0 | Estructura y publicación del repositorio | Completada |
+| 13/07/2026 | A0 | Declaración profesional inicial | Completada |
+| 13/07/2026 | A0 | Mapa inicial de competencias | Completado |
+| 13/07/2026 | A0 | Clase 01 — De Soporte IT a AI Support | 4/4 |
+| 14/07/2026 | A1 | Clase 02 — Fundamentos de IA | Completada |
+| 14/07/2026 | A1 | Mini test final de la Clase 02 | 5/5 |
+| 15/07/2026 | A1 | Test avanzado de consolidación | 27/30 |
+| 15/07/2026 | A1 | Componentes y localización de fallos | 6/6 + 6/6 |
+| 15/07/2026 | A1 | Infografía de fundamentos de IA | Completada |
 
 ---
 
@@ -111,8 +146,10 @@ Cada viernes responderé:
 
 ## Próxima acción
 
-Comenzar la **Fase A1 — Fundamentos de IA**:
+Completar la **Clase 03 — Laboratorio de comparación y evaluación de respuestas de IA**:
 
-1. Clase 02 — Qué es realmente la Inteligencia Artificial.
-2. Diferenciar IA, Machine Learning, modelos y LLM.
-3. Crear la siguiente entrada del Learning Log.
+1. comparar respuestas de varios modelos o configuraciones;
+2. detectar información no respaldada;
+3. observar los efectos de las instrucciones y el contexto;
+4. documentar el laboratorio en `01-fundamentos-ia/laboratorios/`;
+5. actualizar el Learning Log y GitHub.
