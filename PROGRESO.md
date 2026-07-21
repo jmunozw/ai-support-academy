@@ -71,6 +71,34 @@ Idea operativa consolidada:
 
 > El error se origina en la capa de generación del LLM. Llega al usuario porque falla la validación.
 
+### Clase 03 — Evaluación de respuestas de IA
+
+**Estado:** completada.
+
+Competencias trabajadas:
+
+- evaluación independiente de claridad, relevancia, completitud, exactitud, fundamentación y seguridad;
+- diferenciación entre vacío documental y alucinación;
+- detección de instrucciones inseguras;
+- reconocimiento de alucinaciones informativas y de acción;
+- clasificación de incidencias según probabilidad e impacto;
+- separación entre contención, corrección y prevención;
+- diseño de respuestas seguras;
+- creación de pruebas de regresión;
+- conservación de logs y versiones para garantizar la trazabilidad.
+
+Resultados:
+
+- evaluación comparativa: **Respuesta A 5/12 y Respuesta B 12/12**;
+- respuesta segura redactada: **9/12**;
+- incidencia de producción diagnosticada;
+- tres pruebas de validación diseñadas;
+- mini test final: **5/5**.
+
+Idea operativa consolidada:
+
+> Una respuesta puede ser clara y relevante, pero seguir siendo falsa. Cada criterio debe evaluarse de forma independiente.
+
 ---
 
 ## Rutina semanal oficial
@@ -128,6 +156,12 @@ No será necesario producir todas las evidencias en cada sesión.
 | 15/07/2026 | A1 | Test avanzado de consolidación | 27/30 |
 | 15/07/2026 | A1 | Componentes y localización de fallos | 6/6 + 6/6 |
 | 15/07/2026 | A1 | Infografía de fundamentos de IA | Completada |
+| 21/07/2026 | A1 | Clase 03 — Evaluación de respuestas de IA | Completada |
+| 21/07/2026 | A1 | Evaluación comparativa de respuestas | 5/12 y 12/12 |
+| 21/07/2026 | A1 | Diagnóstico y contención de una incidencia | Completado |
+| 21/07/2026 | A1 | Pruebas de regresión | 3 casos diseñados |
+| 21/07/2026 | A1 | Mini test final de la Clase 03 | 5/5 |
+| 21/07/2026 | A1 | Infografía de evaluación de respuestas de IA | Completada |
 
 ---
 
@@ -146,10 +180,10 @@ Cada viernes responderé:
 
 ## Próxima acción
 
-Completar la **Clase 03 — Laboratorio de comparación y evaluación de respuestas de IA**:
+Completar la **Clase 04 — Comparación de modelos, contexto y temperatura**:
 
-1. comparar respuestas de varios modelos o configuraciones;
-2. detectar información no respaldada;
-3. observar los efectos de las instrucciones y el contexto;
-4. documentar el laboratorio en `01-fundamentos-ia/laboratorios/`;
-5. actualizar el Learning Log y GitHub.
+1. comparar respuestas producidas por diferentes modelos o configuraciones;
+2. observar cómo influyen las instrucciones y el contexto;
+3. analizar el efecto de la temperatura;
+4. crear una tabla comparativa;
+5. documentar las conclusiones y evidencias.

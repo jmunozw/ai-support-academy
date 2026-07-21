@@ -174,3 +174,99 @@ Método de diagnóstico aprendido:
 ```
 
 **Estado definitivo:** Clase 02 completada y consolidada.
+
+---
+
+## Entrada 003 — Evaluación segura de respuestas de IA
+
+**Fecha:** 2026-07-21
+**Clase:** 03 — Evaluación de respuestas de IA
+**Fase:** A1 — Fundamentos de IA
+**Estado:** Completada
+**Mini test final:** 5/5
+
+### Qué he aprendido
+
+- Evaluar por separado la claridad, relevancia, completitud, exactitud, fundamentación y seguridad.
+- Comprender que una respuesta puede estar bien escrita y ser completamente falsa.
+- Diferenciar una alucinación de un vacío en la documentación.
+- Detectar instrucciones que obligan al modelo a responder con seguridad aunque no tenga información.
+- Reconocer una alucinación de acción cuando el asistente afirma haber realizado una operación que realmente no ejecutó.
+- Clasificar la gravedad de una incidencia mediante la probabilidad de repetición y su impacto.
+- Separar las acciones de contención, corrección y prevención.
+- Diseñar pruebas de regresión con resultados esperados y comportamientos prohibidos.
+- Mantener logs y versiones archivadas para garantizar la trazabilidad.
+
+### Caso práctico trabajado
+
+Un asistente de Recursos Humanos afirmó que los empleados incorporados a mitad de año tenían derecho a 30 días completos de vacaciones, aunque la documentación no contenía la regla de cálculo proporcional.
+
+Se identificaron dos factores principales:
+
+- una documentación incompleta;
+- una instrucción insegura que exigía responder siempre de forma clara y definitiva.
+
+La incidencia se clasificó como grave porque estaba ocurriendo en producción, afectaba a derechos laborales y podía repetirse con otros empleados.
+
+### Contención propuesta
+
+1. Desactivar temporalmente las respuestas sobre el cálculo proporcional.
+2. Mostrar una respuesta segura que derive el caso a Recursos Humanos.
+3. Informar y corregir las respuestas enviadas a los empleados afectados.
+4. Conservar las consultas, respuestas y logs para investigar la incidencia.
+
+### Aprendizaje sobre el ciclo de una incidencia
+
+```text
+Contener
+↓
+Detener el impacto inmediato
+
+Corregir
+↓
+Eliminar la causa raíz
+
+Prevenir
+↓
+Evitar que el fallo vuelva a producirse
+```
+
+### Pruebas de regresión diseñadas
+
+Se prepararon tres casos:
+
+- empleado incorporado a mitad de año;
+- empleado que solicita 20 días consecutivos;
+- empleado que desea tramitar 10 días de vacaciones.
+
+Para cada caso se definieron:
+
+- la respuesta esperada;
+- la información que el asistente no debe inventar;
+- el escalado adecuado;
+- las acciones que no puede afirmar haber realizado.
+
+### Resultados
+
+- Evaluación comparativa: **Respuesta A 5/12 y Respuesta B 12/12**.
+- Respuesta segura redactada: **9/12**.
+- Diagnóstico de incidencia: completado.
+- Pruebas de validación: **3 casos diseñados**.
+- Mini test final: **5/5**.
+
+### Concepto consolidado
+
+> Una respuesta puede ser clara, relevante y convincente, pero seguir siendo falsa. Los criterios de calidad deben evaluarse de forma independiente.
+
+### Evidencias creadas
+
+- Documento completo de la Clase 03.
+- Evaluación comparativa de respuestas.
+- Diagnóstico de una incidencia en producción.
+- Diseño de pruebas de regresión.
+- Infografía de evaluación de respuestas de IA.
+- Mini test final superado con 5/5.
+
+### Próxima acción
+
+Completar la **Clase 04 — Comparación de modelos, contexto y temperatura**.

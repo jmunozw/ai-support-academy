@@ -8,10 +8,10 @@ El objetivo de esta fase no es entrenar modelos desde cero, sino adquirir el map
 
 ## Estado actual
 
-**Fase:** A1 — Fundamentos de IA  
-**Estado:** en progreso  
-**Última clase completada:** Clase 02 — Qué es realmente la Inteligencia Artificial  
-**Siguiente actividad:** Clase 03 — Laboratorio de comparación y evaluación de respuestas de IA
+**Fase:** A1 — Fundamentos de IA
+**Estado:** en progreso
+**Última clase completada:** Clase 03 — Evaluación de respuestas de IA
+**Siguiente actividad:** Clase 04 — Comparación de modelos, contexto y temperatura
 
 ---
 
@@ -21,10 +21,12 @@ El objetivo de esta fase no es entrenar modelos desde cero, sino adquirir el map
 01-fundamentos-ia/
 ├── clases/
 │   ├── Clase-01-De-Soporte-IT-a-AI-Support.md
-│   └── Clase-02-Que-es-realmente-la-Inteligencia-Artificial.md
+│   ├── Clase-02-Que-es-realmente-la-Inteligencia-Artificial.md
+│   └── Clase-03-Evaluacion-de-Respuestas-de-IA.md
 ├── evidencias/
 │   ├── Infografia-Clase-01-De-Soporte-IT-a-IA-Support.png
-│   └── Infografia-Clase-02-Fundamentos-IA.png
+│   ├── Infografia-Clase-02-Fundamentos-IA.png
+│   └── Infografia-Clase-03-Evaluacion-de-Respuestas-IA.png
 ├── laboratorios/
 │   └── .gitkeep
 └── README.md
@@ -47,7 +49,15 @@ El objetivo de esta fase no es entrenar modelos desde cero, sino adquirir el map
 - fine-tuning;
 - construcción del contexto;
 - generación y validación;
-- diagnóstico por capas.
+- diagnóstico por capas;
+- criterios de evaluación de respuestas;
+- vacío documental y alucinación;
+- alucinaciones informativas y de acción;
+- instrucciones inseguras;
+- gravedad de incidencias;
+- contención, corrección y prevención;
+- pruebas de regresión;
+- trazabilidad y conservación de logs.
 
 ---
 
@@ -84,7 +94,11 @@ En este momento solamente es necesario:
 3. reconocer una alucinación;
 4. comprender la función general de RAG;
 5. saber que actualizar documentos no reentrena el modelo;
-6. localizar un fallo sencillo dentro del flujo.
+6. localizar un fallo sencillo dentro del flujo;
+7. evaluar por separado la calidad, fundamentación y seguridad de una respuesta;
+8. diferenciar un vacío documental de una alucinación;
+9. separar la contención, la corrección y la prevención de una incidencia;
+10. diseñar pruebas de regresión con resultados esperados y comportamientos prohibidos.
 
 Los embeddings, la búsqueda vectorial, el contexto, RAG y la validación se profundizarán en fases posteriores.
 
@@ -106,12 +120,29 @@ Concepto consolidado:
 
 ---
 
+## Resultados de la Clase 03
+
+| Evaluación | Resultado |
+|---|---:|
+| Comparación de la Respuesta A | 5/12 |
+| Comparación de la Respuesta B | 12/12 |
+| Redacción de respuesta segura | 9/12 |
+| Diagnóstico de incidencia | Completado |
+| Pruebas de validación | 3 casos |
+| Mini test final | 5/5 |
+
+Concepto consolidado:
+
+> Una respuesta puede ser clara y relevante, pero seguir siendo falsa. Cada criterio debe evaluarse de forma independiente.
+
+---
+
 ## Próxima actividad
 
-La Clase 03 será un laboratorio práctico para:
+La Clase 04 estará orientada a:
 
-- comparar respuestas;
-- detectar alucinaciones;
+- comparar respuestas de diferentes modelos o configuraciones;
 - observar cómo influyen las instrucciones y el contexto;
-- documentar evidencias reales;
-- comenzar a evaluar una aplicación de IA como técnico de soporte.
+- experimentar con la temperatura;
+- identificar diferencias de calidad, seguridad y consistencia;
+- crear una tabla comparativa con evidencias.

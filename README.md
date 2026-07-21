@@ -59,7 +59,7 @@ Cada concepto debe producir alguna evidencia:
 | Fase | Contenido | Estado |
 |---|---|---|
 | A0 | Organización del proyecto | Completada |
-| A1 | Fundamentos de IA | En progreso — Clase 02 completada |
+| A1 | Fundamentos de IA | En progreso — Clase 03 completada |
 | A2 | HTTP, APIs y JSON | Pendiente |
 | A3 | Python para AI Support | Pendiente |
 | A4 | Prompt Engineering operativo | Pendiente |
