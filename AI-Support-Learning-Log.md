@@ -269,4 +269,169 @@ Para cada caso se definieron:
 
 ### Próxima acción
 
-Completar la **Clase 04 — Comparación de modelos, contexto y temperatura**.
+Comenzar la **Fase A2 — HTTP, APIs y JSON** con la **Clase 04 — Internet, HTTP y cómo hablan las aplicaciones**.
+
+---
+
+## Entrada 004 — Internet, HTTP y comunicación entre aplicaciones
+
+**Fecha:** 2026-08-13  
+**Clase:** 04 — Internet, HTTP y cómo hablan las aplicaciones  
+**Fase:** A2 — HTTP, APIs y JSON  
+**Estado:** Completada  
+**Mini test final:** 5/5
+
+### Qué he aprendido
+
+- Comprender Internet como una red de dispositivos conectados mediante protocolos.
+- Diferenciar las funciones del cliente y del servidor.
+- Entender el patrón básico de petición y respuesta.
+- Comprender que HTTP organiza la comunicación entre clientes y servidores.
+- Diferenciar HTTP y HTTPS a nivel inicial.
+- Descubrir que una página web puede realizar decenas o cientos de peticiones.
+- Utilizar la pestaña Network de las herramientas de desarrollo del navegador.
+- Reconocer distintos tipos de recursos solicitados por una página.
+- Identificar por primera vez los términos Fetch, XHR y Preflight.
+- Comprender la latencia como el tiempo transcurrido entre una petición y su respuesta.
+
+### Concepto principal
+
+Una aplicación no obtiene necesariamente toda la información mediante una única petición.
+
+Al abrir o utilizar una página web, el navegador puede solicitar por separado:
+
+- el documento HTML;
+- los estilos CSS;
+- el código JavaScript;
+- las imágenes;
+- las fuentes;
+- los iconos;
+- los datos utilizados por la aplicación.
+
+Estas peticiones pueden ejecutarse y completarse en muy poco tiempo.
+
+### Flujo básico aprendido
+
+```text
+Cliente
+   │
+   │ Envía una petición HTTP
+   ▼
+Servidor
+   │
+   │ Procesa la petición
+   ▼
+Cliente
+   │
+   │ Recibe la respuesta HTTP
+   ▼
+Usuario
+```
+
+### Laboratorio realizado
+
+Se utilizaron las herramientas de desarrollo del navegador para inspeccionar el tráfico generado al navegar por diferentes páginas web.
+
+Procedimiento:
+
+1. Abrir una página web.
+2. Pulsar `F12`.
+3. Acceder a la pestaña Network.
+4. Recargar la página.
+5. Navegar por diferentes enlaces.
+6. Observar las peticiones realizadas.
+7. Identificar los recursos conocidos.
+8. Anotar los elementos desconocidos.
+9. Observar la velocidad de carga.
+
+### Observaciones del laboratorio
+
+Se observaron más de 50 peticiones por cada página o enlace visitado.
+
+Recursos reconocidos:
+
+- JPG.
+- PNG.
+- GIF.
+- CSS.
+- Scripts.
+- Fuentes.
+
+Elementos inicialmente desconocidos:
+
+- SVG.
+- Fetch.
+- XHR.
+- Preflight.
+- Otros tipos de solicitudes y recursos.
+
+### Lo que más me sorprendió
+
+Lo que más me llamó la atención fue la velocidad con la que se cargó toda la información.
+
+El navegador fue capaz de realizar numerosas peticiones, recibir las respuestas, descargar los recursos y construir la página completa en muy poco tiempo.
+
+Esta observación me permitió comprender la importancia de la latencia en el funcionamiento y diagnóstico de una aplicación.
+
+### Primer contacto con Fetch, XHR y Preflight
+
+Aprendí que Fetch y XHR suelen aparecer cuando JavaScript solicita información al servidor sin recargar completamente la página.
+
+También identifiqué Preflight como una comprobación previa relacionada con la seguridad del navegador y CORS.
+
+Estos conceptos todavía no se han estudiado en profundidad, pero ya puedo reconocerlos dentro de la pestaña Network.
+
+### Mentalidad de AI Support
+
+Ante una incidencia, no es suficiente decir:
+
+> La aplicación no funciona.
+
+Debo intentar localizar el punto exacto donde falla o se degrada la comunicación.
+
+Primeras preguntas de diagnóstico:
+
+```text
+¿Existe conexión?
+→ ¿Se ha enviado la petición?
+→ ¿Ha llegado una respuesta?
+→ ¿La respuesta contiene un error?
+→ ¿Cuánto ha tardado?
+```
+
+### Resultados
+
+- Mini test final: **5/5**.
+- Laboratorio con DevTools: completado.
+- Inspección de tráfico con Network: completada.
+- Más de 50 peticiones observadas por página.
+- Recursos web habituales reconocidos.
+- Fetch, XHR y Preflight identificados.
+- Concepto inicial de latencia comprendido.
+
+### Concepto consolidado
+
+> Un profesional de AI Support no adivina el problema: utiliza evidencias para localizar dónde se rompe o se degrada la comunicación.
+
+### Evidencias creadas
+
+- Documento completo de la Clase 04.
+- Laboratorio de inspección de tráfico con Network.
+- Resultado del mini test: 5/5.
+- Registro de los recursos identificados.
+- Infografía de Internet, HTTP y comunicación entre aplicaciones.
+- Actualización de `PROGRESO.md`.
+- Actualización del Learning Log.
+
+### Próxima acción
+
+Completar la **Clase 05 — APIs REST: cómo las aplicaciones piden y modifican datos**.
+
+Objetivos de la próxima clase:
+
+1. Comprender qué es una API.
+2. Entender qué significa REST.
+3. Diferenciar recursos y endpoints.
+4. Conocer los principales métodos HTTP.
+5. Analizar ejemplos de peticiones a una API.
+6. Empezar a interpretar comunicaciones reales entre aplicaciones.

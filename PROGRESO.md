@@ -2,7 +2,8 @@
 
 **Inicio:** 13 de julio de 2026  
 **Objetivo profesional:** AI Support & Operations Specialist  
-**Estado general:** En formación
+**Estado general:** En formación  
+**Fase actual:** A2 — HTTP, APIs y JSON
 
 ---
 
@@ -11,8 +12,8 @@
 | Fase | Contenido | Estado | Progreso |
 |---|---|---:|---:|
 | A0 | Organización del proyecto | Completada | 100% |
-| A1 | Fundamentos de IA | En progreso | Clase 02 completada y consolidada |
-| A2 | HTTP, APIs y JSON | Pendiente | 0% |
+| A1 | Fundamentos de IA | Completada | 100% |
+| A2 | HTTP, APIs y JSON | En progreso | Clase 04 completada — 20% |
 | A3 | Python para AI Support | Pendiente | 0% |
 | A4 | Prompt Engineering operativo | Pendiente | 0% |
 | A5 | LLM Operations | Pendiente | 0% |
@@ -24,7 +25,11 @@
 
 ---
 
-## Fase A0 — Lista de comprobación
+## Fase A0 — Organización del proyecto
+
+**Estado:** completada ✅
+
+### Lista de comprobación
 
 - [x] Nombre e identidad del proyecto definidos
 - [x] Perfil profesional objetivo definido
@@ -42,7 +47,33 @@
 
 ---
 
-## Fase A1 — Estado actual
+## Fase A1 — Fundamentos de IA
+
+**Estado:** completada ✅
+
+### Clases completadas
+
+- [x] Clase 01 — De Soporte IT a AI Support
+- [x] Clase 02 — Qué es realmente la Inteligencia Artificial
+- [x] Clase 03 — Evaluación de respuestas de IA
+
+### Clase 01 — De Soporte IT a AI Support
+
+**Estado:** completada.
+
+Competencias trabajadas:
+
+- comprensión del perfil de AI Support;
+- relación entre la experiencia en Soporte IT y los sistemas de IA;
+- identificación de responsabilidades operativas;
+- diferenciación entre el uso de una IA y el soporte de una aplicación de IA;
+- definición de la ruta profesional del proyecto.
+
+Resultado:
+
+- ejercicio final completado: **4/4**;
+- infografía de la clase creada;
+- primera evidencia formativa incorporada al repositorio.
 
 ### Clase 02 — Qué es realmente la Inteligencia Artificial
 
@@ -101,6 +132,58 @@ Idea operativa consolidada:
 
 ---
 
+## Fase A2 — HTTP, APIs y JSON
+
+**Estado:** en progreso 🚧  
+**Progreso:** 1 de 5 clases completadas
+
+### Plan de clases
+
+- [x] Clase 04 — Internet, HTTP y cómo hablan las aplicaciones
+- [ ] Clase 05 — APIs REST: cómo las aplicaciones piden y modifican datos
+- [ ] Clase 06 — JSON: el idioma de los datos
+- [ ] Clase 07 — Postman y diagnóstico de peticiones
+- [ ] Clase 08 — Primer laboratorio real de APIs
+
+### Clase 04 — Internet, HTTP y cómo hablan las aplicaciones
+
+**Estado:** completada ✅
+
+Conceptos trabajados:
+
+- funcionamiento general de Internet;
+- protocolos de comunicación;
+- relación entre cliente y servidor;
+- patrón petición–respuesta;
+- función básica de HTTP;
+- diferencia inicial entre HTTP y HTTPS;
+- recursos cargados por una página web;
+- uso de la pestaña Network del navegador;
+- primer contacto con SVG, Fetch, XHR y Preflight;
+- concepto inicial de latencia;
+- diagnóstico de la comunicación mediante evidencias.
+
+### Resultados de la Clase 04
+
+- test de conocimientos: **5/5**;
+- laboratorio con DevTools y Network: completado;
+- más de 50 peticiones observadas por página;
+- recursos JPG, PNG, GIF, CSS, scripts y fuentes reconocidos;
+- SVG, Fetch, XHR y Preflight identificados;
+- latencia reconocida como el tiempo entre petición y respuesta;
+- infografía de la clase creada;
+- documentación incorporada al repositorio.
+
+### Observación principal
+
+> Una página web no se obtiene mediante una única petición. El navegador realiza decenas o cientos de solicitudes para descargar datos, imágenes, estilos, scripts y otros recursos.
+
+### Idea operativa consolidada
+
+> Un profesional de AI Support no adivina el problema: analiza dónde se rompe o se degrada la comunicación.
+
+---
+
 ## Rutina semanal oficial
 
 Trabajaré en la academia tres días por semana:
@@ -150,7 +233,7 @@ No será necesario producir todas las evidencias en cada sesión.
 | 13/07/2026 | A0 | Estructura y publicación del repositorio | Completada |
 | 13/07/2026 | A0 | Declaración profesional inicial | Completada |
 | 13/07/2026 | A0 | Mapa inicial de competencias | Completado |
-| 13/07/2026 | A0 | Clase 01 — De Soporte IT a AI Support | 4/4 |
+| 13/07/2026 | A1 | Clase 01 — De Soporte IT a AI Support | 4/4 |
 | 14/07/2026 | A1 | Clase 02 — Fundamentos de IA | Completada |
 | 14/07/2026 | A1 | Mini test final de la Clase 02 | 5/5 |
 | 15/07/2026 | A1 | Test avanzado de consolidación | 27/30 |
@@ -162,6 +245,11 @@ No será necesario producir todas las evidencias en cada sesión.
 | 21/07/2026 | A1 | Pruebas de regresión | 3 casos diseñados |
 | 21/07/2026 | A1 | Mini test final de la Clase 03 | 5/5 |
 | 21/07/2026 | A1 | Infografía de evaluación de respuestas de IA | Completada |
+| 13/08/2026 | A2 | Clase 04 — Internet, HTTP y comunicación entre aplicaciones | Completada |
+| 13/08/2026 | A2 | Test de conocimientos de la Clase 04 | 5/5 |
+| 13/08/2026 | A2 | Laboratorio con DevTools y Network | Completado |
+| 13/08/2026 | A2 | Inspección de más de 50 peticiones por página | Completada |
+| 13/08/2026 | A2 | Infografía de Internet y HTTP | Completada |
 
 ---
 
@@ -180,10 +268,12 @@ Cada viernes responderé:
 
 ## Próxima acción
 
-Completar la **Clase 04 — Comparación de modelos, contexto y temperatura**:
+Completar la **Clase 05 — APIs REST: cómo las aplicaciones piden y modifican datos**:
 
-1. comparar respuestas producidas por diferentes modelos o configuraciones;
-2. observar cómo influyen las instrucciones y el contexto;
-3. analizar el efecto de la temperatura;
-4. crear una tabla comparativa;
-5. documentar las conclusiones y evidencias.
+1. comprender qué es una API;
+2. entender qué significa REST;
+3. diferenciar recursos y endpoints;
+4. conocer los principales métodos HTTP;
+5. interpretar ejemplos de peticiones a una API;
+6. documentar los ejercicios y resultados;
+7. preparar la siguiente evidencia para el repositorio.
