@@ -1,0 +1,33 @@
+HTTP/1.1 201 Created
+Date: Thu, 20 Aug 2026 10:49:18 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 84
+Connection: keep-alive
+access-control-allow-credentials: true
+access-control-expose-headers: Location
+Cache-Control: no-cache
+etag: W/"54-gl+20yzQI9hKX5Li8u3Q4xO+ios"
+expires: -1
+location: https://jsonplaceholder.typicode.com/posts/101
+nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+pragma: no-cache
+report-to: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=OArb16N0D2vklBhQfxl4SY5chE%2BLiMZV4agdd%2F6ice0%3D\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\u0026ts=1787222958"}],"max_age":3600}
+reporting-endpoints: heroku-nel="https://nel.heroku.com/reports?s=OArb16N0D2vklBhQfxl4SY5chE%2BLiMZV4agdd%2F6ice0%3D&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&ts=1787222958"
+Server: cloudflare
+vary: Origin, X-HTTP-Method-Override, Accept-Encoding
+via: 2.0 heroku-router
+x-content-type-options: nosniff
+x-powered-by: Express
+x-ratelimit-limit: 1000
+x-ratelimit-remaining: 999
+x-ratelimit-reset: 1787223015
+cf-cache-status: DYNAMIC
+CF-RAY: a2e0d4a15a0f7517-MAD
+alt-svc: h3=":443"; ma=86400
+
+{
+  "title": "Prueba SOS",
+  "body": "Laboratorio API",
+  "userId": 1,
+  "id": 101
+}
