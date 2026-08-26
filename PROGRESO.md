@@ -4,6 +4,7 @@
 **Objetivo profesional:** AI Support & Operations Specialist  
 **Estado general:** En formación  
 **Fase actual:** A2 — HTTP, APIs y JSON
+**Última actualización:** 26 de agosto de 2026
 
 ---
 
@@ -13,7 +14,7 @@
 |---|---|---:|---:|
 | A0 | Organización del proyecto | Completada | 100% |
 | A1 | Fundamentos de IA | Completada | 100% |
-| A2 | HTTP, APIs y JSON | En progreso | Clase 04 completada — 20% |
+| A2 | HTTP, APIs y JSON | En progreso | Clases 04 y 05 completadas — 40% |
 | A3 | Python para AI Support | Pendiente | 0% |
 | A4 | Prompt Engineering operativo | Pendiente | 0% |
 | A5 | LLM Operations | Pendiente | 0% |
@@ -135,15 +136,15 @@ Idea operativa consolidada:
 ## Fase A2 — HTTP, APIs y JSON
 
 **Estado:** en progreso 🚧  
-**Progreso:** 1 de 5 clases completadas
+**Progreso:** 2 de 5 clases completadas — laboratorio A2-01 completado
 
 ### Plan de clases
 
 - [x] Clase 04 — Internet, HTTP y cómo hablan las aplicaciones
-- [ ] Clase 05 — APIs REST: cómo las aplicaciones piden y modifican datos
-- [ ] Clase 06 — JSON: el idioma de los datos
+- [x] Clase 05 — APIs REST: anatomía de peticiones y respuestas HTTP
+- [ ] Clase 06 — JSON: estructura, tipos de datos y validación
 - [ ] Clase 07 — Postman y diagnóstico de peticiones
-- [ ] Clase 08 — Primer laboratorio real de APIs
+- [ ] Clase 08 — Diagnóstico integral de APIs
 
 ### Clase 04 — Internet, HTTP y cómo hablan las aplicaciones
 
@@ -181,6 +182,75 @@ Conceptos trabajados:
 ### Idea operativa consolidada
 
 > Un profesional de AI Support no adivina el problema: analiza dónde se rompe o se degrada la comunicación.
+
+---
+
+### Laboratorio A2-01 — API Diagnostic Lab
+
+**Estado:** completado ✅
+**Fecha:** 18–20 de agosto de 2026
+**Commit:** `25a0235`
+
+Peticiones documentadas:
+
+- `GET /posts/1` → `200 OK`;
+- `GET /ruta-inexistente` → `404 Not Found`;
+- `POST /posts` con JSON malformado → `500 Internal Server Error`;
+- `POST /posts` con JSON corregido → `201 Created`, identificador `101`.
+
+Evidencias incorporadas:
+
+- README del laboratorio;
+- cuatro registros técnicos de petición y respuesta;
+- cuerpo JSON utilizado para la petición `POST`;
+- documentación guardada en UTF-8;
+- resultados publicados en GitHub.
+
+Aprendizaje principal:
+
+> Una incidencia de API debe documentarse con método, endpoint, código, cabeceras, cuerpo, tiempo y resultado observado.
+
+### Clase 05 — APIs REST: anatomía de peticiones y respuestas HTTP
+
+**Estado:** completada ✅
+
+Conceptos trabajados:
+
+- diferencia entre API y REST;
+- recursos, identificadores y endpoints;
+- anatomía de peticiones y respuestas HTTP;
+- métodos `GET`, `POST`, `PUT` y `DELETE`;
+- familias `2xx`, `3xx`, `4xx` y `5xx`;
+- códigos `200`, `201`, `400`, `401`, `403`, `404`, `429` y `500`;
+- cabeceras `Accept` y `Content-Type`;
+- objetos `{}`, arrays `[]` y colecciones filtradas;
+- parámetros de consulta;
+- persistencia y comportamiento de una API simulada;
+- DNS, conexión TCP, SSL/TLS, TTFB, descarga y tiempo total.
+
+Resultados:
+
+- `GET /posts/1` analizado con `200 OK` y respuesta JSON;
+- recurso individual inexistente diferenciado de una colección vacía;
+- conexión reutilizada identificada mediante la ausencia de nuevas fases DNS/TCP/SSL;
+- evaluación inicial: **4/5**;
+- pregunta de recuperación: correcta;
+- comprobación final de API frente a REST: superada;
+- documento completo e infografía técnica creados.
+
+Mediciones registradas:
+
+- primera petición: `98,24 ms` totales y `25,76 ms` de TTFB;
+- segunda petición: `94,10 ms` totales y `32,45 ms` de TTFB;
+- colección filtrada con conexión reutilizada: `30,58 ms` totales, `24,04 ms` de TTFB y `4,16 ms` de descarga.
+
+Ideas operativas consolidadas:
+
+> La API permite la comunicación; REST propone cómo organizarla.
+
+> Un `404` demuestra que el servidor ha respondido, pero no ha encontrado la ruta o el recurso solicitado.
+
+> Que el tiempo total disminuya no significa necesariamente que también haya disminuido el TTFB.
 
 ---
 
@@ -250,6 +320,13 @@ No será necesario producir todas las evidencias en cada sesión.
 | 13/08/2026 | A2 | Laboratorio con DevTools y Network | Completado |
 | 13/08/2026 | A2 | Inspección de más de 50 peticiones por página | Completada |
 | 13/08/2026 | A2 | Infografía de Internet y HTTP | Completada |
+| 18–20/08/2026 | A2 | Laboratorio A2-01 — API Diagnostic Lab | Completado |
+| 18–20/08/2026 | A2 | GET 200, GET 404, POST 500 y POST 201 | Documentados |
+| 20/08/2026 | A2 | README y evidencias del laboratorio | Commit `25a0235` |
+| 26/08/2026 | A2 | Clase 05 — APIs REST y anatomía HTTP | Completada |
+| 26/08/2026 | A2 | Evaluación final de la Clase 05 | 4/5 + recuperación correcta |
+| 26/08/2026 | A2 | Análisis de cabeceras y tiempos HTTP | Completado |
+| 26/08/2026 | A2 | Infografía de APIs REST y HTTP | Completada |
 
 ---
 
@@ -268,12 +345,11 @@ Cada viernes responderé:
 
 ## Próxima acción
 
-Completar la **Clase 05 — APIs REST: cómo las aplicaciones piden y modifican datos**:
+Completar la **Clase 06 — JSON: estructura, tipos de datos y validación**:
 
-1. comprender qué es una API;
-2. entender qué significa REST;
-3. diferenciar recursos y endpoints;
-4. conocer los principales métodos HTTP;
-5. interpretar ejemplos de peticiones a una API;
-6. documentar los ejercicios y resultados;
-7. preparar la siguiente evidencia para el repositorio.
+1. identificar los tipos de datos disponibles en JSON;
+2. diferenciar objetos y arrays anidados;
+3. acceder a valores dentro de una respuesta;
+4. reconocer JSON válido y JSON malformado;
+5. interpretar respuestas reales de una API;
+6. documentar errores de estructura y validación.

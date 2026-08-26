@@ -435,3 +435,188 @@ Objetivos de la próxima clase:
 4. Conocer los principales métodos HTTP.
 5. Analizar ejemplos de peticiones a una API.
 6. Empezar a interpretar comunicaciones reales entre aplicaciones.
+
+---
+
+## Entrada 005 — API Diagnostic Lab
+
+**Fecha:** 2026-08-18 a 2026-08-20
+**Laboratorio:** A2-01 — API Diagnostic Lab
+**Fase:** A2 — HTTP, APIs y JSON
+**Estado:** Completado
+**Commit:** `25a0235`
+
+### Qué he aprendido
+
+- Realizar peticiones reales contra una API pública de pruebas.
+- Registrar el método, endpoint, código de estado y cuerpo de la respuesta.
+- Diferenciar una respuesta correcta de un recurso inexistente.
+- Comprobar cómo un JSON malformado puede provocar un fallo.
+- Corregir el cuerpo JSON y repetir la petición.
+- Conservar evidencias separadas para cada caso probado.
+- Preparar un README técnico que permita reproducir el laboratorio.
+
+### Casos ejecutados
+
+```text
+GET /posts/1
+→ 200 OK
+
+GET /ruta-inexistente
+→ 404 Not Found
+
+POST /posts con JSON malformado
+→ 500 Internal Server Error
+
+POST /posts con JSON corregido
+→ 201 Created
+→ id: 101
+```
+
+### Evidencias creadas
+
+- `01-GET-post-1-200.txt`.
+- `02-GET-ruta-inexistente-404.txt`.
+- `03-POST-post-500-json-malformado.txt`.
+- `04-POST-post-201-reintento-correcto.txt`.
+- `03-POST-post.json`.
+- README del laboratorio en UTF-8.
+
+### Concepto consolidado
+
+> Un diagnóstico de API debe registrar la petición enviada, la respuesta recibida y el resultado observado, de forma que otra persona pueda reproducirlo.
+
+### Próxima acción
+
+Completar la **Clase 05 — APIs REST: anatomía de peticiones y respuestas HTTP**.
+
+---
+
+## Entrada 006 — APIs REST y anatomía de peticiones y respuestas HTTP
+
+**Fecha:** 2026-08-26
+**Clase:** 05 — APIs REST: anatomía de peticiones y respuestas HTTP
+**Fase:** A2 — HTTP, APIs y JSON
+**Estado:** Completada
+**Evaluación:** 4/5 + recuperación correcta; comprobación API/REST superada
+
+### Qué he aprendido
+
+- Comprender que una API permite la comunicación entre aplicaciones.
+- Comprender que REST es una forma de organizar una API alrededor de recursos y métodos HTTP.
+- Identificar métodos, endpoints, recursos e identificadores.
+- Relacionar `GET`, `POST`, `PUT` y `DELETE` con sus operaciones habituales.
+- Interpretar los códigos `200`, `201`, `400`, `401`, `403`, `404`, `429` y `500`.
+- Diferenciar la cabecera de petición `Accept` de la cabecera de respuesta `Content-Type`.
+- Diferenciar un objeto JSON `{}` de un array `[]`.
+- Distinguir un recurso individual inexistente de una colección válida sin coincidencias.
+- Interpretar parámetros de consulta y filtros combinados.
+- Comprobar si una creación simulada quedó realmente almacenada.
+- Analizar DNS, conexión inicial, SSL/TLS, TTFB, descarga y tiempo total.
+
+### API frente a REST
+
+Dos peticiones pueden pertenecer a una API, aunque solo una siga el estilo REST:
+
+```text
+POST /eliminarTicket
+→ Es una operación de API, pero no sigue el diseño REST utilizado en la clase.
+
+DELETE /tickets/25
+→ Es una operación de API organizada con estilo REST.
+```
+
+Concepto consolidado:
+
+> La API permite la comunicación; REST propone cómo organizarla.
+
+### Recurso individual y colección filtrada
+
+```text
+GET /posts/999999
+→ 404 Not Found
+→ {}
+
+GET /posts?userId=999999
+→ 200 OK
+→ []
+```
+
+El primer caso solicita un recurso concreto que no existe. El segundo consulta una colección válida, pero el filtro no encuentra coincidencias.
+
+### Cabeceras observadas
+
+```text
+Accept:
+text/html, application/xhtml+xml, application/xml, image/*, */*
+
+Content-Type:
+application/json; charset=utf-8
+```
+
+`Accept` expresa qué formatos puede aceptar el cliente. `Content-Type` indica qué formato devuelve realmente el servidor.
+
+### Mediciones realizadas
+
+Primera petición a `/posts/1`:
+
+```text
+Total: 98,24 ms
+TTFB: 25,76 ms
+Descarga: 0,57 ms
+DNS: 32,87 ms
+Conexión/SSL: 33,58 ms
+```
+
+Segunda petición a `/posts/1`:
+
+```text
+Total: 94,10 ms
+TTFB: 32,45 ms
+Descarga: 0,42 ms
+DNS: 22,58 ms
+Conexión/SSL: 35,41 ms
+```
+
+Consulta filtrada `/posts?userId=1`:
+
+```text
+Resultados: 10
+Total: 30,58 ms
+TTFB: 24,04 ms
+Descarga: 4,16 ms
+DNS/TCP/SSL: conexión reutilizada
+```
+
+La respuesta con diez publicaciones descargó más contenido, pero terminó antes porque no necesitó repetir DNS, TCP ni SSL.
+
+### Diagnóstico aplicado
+
+Ante un `404 Not Found` confirmé que:
+
+- el servidor estaba accesible y había respondido;
+- la ruta o el identificador solicitado no existían;
+- debía comprobarse el endpoint exacto;
+- un error como `/post/999999` en lugar de `/posts/999999` podía cambiar el resultado.
+
+También comprendí que un JSON malformado debería producir normalmente `400 Bad Request`. Si desencadena un `500`, el cliente originó el problema, pero el servidor tampoco gestionó correctamente la entrada inválida.
+
+### Evidencias creadas
+
+- Documento completo de la Clase 05.
+- Infografía de APIs REST y HTTP.
+- Registro de métodos, códigos, cabeceras y estructuras JSON.
+- Comparación de tiempos de varias peticiones.
+- Diagnóstico de recurso inexistente y colección vacía.
+- Comprobación de persistencia tras un `POST` simulado.
+
+### Resultados
+
+- Evaluación inicial: **4/5**.
+- Pregunta de recuperación: correcta.
+- Comprobación final de API frente a REST: superada.
+- Clase documentada y preparada para GitHub.
+
+### Próxima acción
+
+Completar la **Clase 06 — JSON: estructura, tipos de datos y validación**.

@@ -2,6 +2,8 @@
 
 Ruta práctica de aprendizaje y reconversión profesional para evolucionar desde Soporte IT hacia un perfil especializado en soporte, operación y automatización de sistemas de Inteligencia Artificial.
 
+**Última actualización:** 26 de agosto de 2026
+
 ## Objetivo profesional
 
 Convertirme en:
@@ -59,8 +61,8 @@ Cada concepto debe producir alguna evidencia:
 | Fase | Contenido | Estado |
 |---|---|---|
 | A0 | Organización del proyecto | Completada |
-| A1 | Fundamentos de IA | En progreso — Clase 03 completada |
-| A2 | HTTP, APIs y JSON | Pendiente |
+| A1 | Fundamentos de IA | Completada |
+| A2 | HTTP, APIs y JSON | En progreso — Clases 04 y 05 + laboratorio A2-01 completados |
 | A3 | Python para AI Support | Pendiente |
 | A4 | Prompt Engineering operativo | Pendiente |
 | A5 | LLM Operations | Pendiente |
@@ -74,21 +76,23 @@ La planificación completa está disponible en [`00-roadmap/ROADMAP.md`](00-road
 
 ## Avance actual
 
-**Fase actual:** A1 — Fundamentos de IA  
-**Último hito:** Clase 02 completada y consolidada  
-**Próxima actividad:** Clase 03 — Laboratorio de comparación y evaluación de respuestas de IA
+**Fase actual:** A2 — HTTP, APIs y JSON
+**Progreso de la fase:** 2 de 5 clases completadas — 40%
+**Último hito:** Clase 05 — APIs REST: anatomía de peticiones y respuestas HTTP
+**Próxima actividad:** Clase 06 — JSON: estructura, tipos de datos y validación
 
-Resultados de la Clase 02:
+Resultados recientes:
 
-- Mini test final: **5/5**
-- Test avanzado: **27/30**
-- Responsabilidades de componentes: **6/6**
-- Localización de fallos: **6/6**
-- Caso final de generación y validación: resuelto
+- Clase 04 completada con test **5/5** y laboratorio DevTools/Network.
+- Laboratorio A2-01 API Diagnostic Lab completado y publicado.
+- Peticiones `GET 200`, `GET 404`, `POST 500` y `POST 201` documentadas.
+- Clase 05 completada con evaluación inicial **4/5**, recuperación correcta y comprobación API/REST superada.
+- Métodos, endpoints, códigos HTTP, cabeceras, estructuras JSON y tiempos de red analizados.
+- Infografía técnica de la Clase 05 incorporada.
 
 Mapa operativo aprendido:
 
-> Embedding representa → Recuperador localiza → Aplicación construye el contexto → LLM genera → Validador comprueba.
+> Método + endpoint + cabeceras + cuerpo → estado + cabeceras + JSON + tiempos.
 
 ## Documentación destacada
 
@@ -96,12 +100,18 @@ Mapa operativo aprendido:
 - [Learning Log](AI-Support-Learning-Log.md)
 - [Fase A1 — Fundamentos de IA](01-fundamentos-ia/README.md)
 - [Clase 02 — Qué es realmente la Inteligencia Artificial](01-fundamentos-ia/clases/Clase-02-Que-es-realmente-la-Inteligencia-Artificial.md)
+- [Clase 03 — Evaluación de respuestas de IA](01-fundamentos-ia/clases/Clase-03-Evaluacion-de-Respuestas-de-IA.md)
+- [Clase 04 — Internet, HTTP y cómo hablan las aplicaciones](02-apis/clases/Clase-04-Internet-HTTP-y-como-hablan-las-aplicaciones.md)
+- [Laboratorio A2-01 — API Diagnostic Lab](02-apis/laboratorios/A2-01-API-Diagnostic-Lab/README.md)
+- [Clase 05 — APIs REST y anatomía HTTP](02-apis/clases/Clase-05-APIs-REST-Anatomia-de-Peticiones-y-Respuestas-HTTP.md)
 - [Infografía de la Clase 01](01-fundamentos-ia/evidencias/Infografia-Clase-01-De-Soporte-IT-a-IA-Support.png)
 - [Infografía de la Clase 02](01-fundamentos-ia/evidencias/Infografia-Clase-02-Fundamentos-IA.png)
+- [Infografía de la Clase 04](02-apis/evidencias/Infografia-Clase-04-Internet-HTTP.png)
+- [Infografía de la Clase 05](02-apis/evidencias/Infografia-Clase-05-APIs-REST-HTTP.png)
 
 ## Proyectos previstos
 
-1. API Diagnostic Lab
+1. API Diagnostic Lab — primer laboratorio completado
 2. LLM Support Client
 3. AI Ticket Classifier
 4. AI Incident Analyzer
@@ -145,13 +155,18 @@ AI-Support-Academy/
 - [x] Fase A0 completada
 - [x] Clase 01 completada
 - [x] Clase 02 completada y consolidada
+- [x] Clase 03 completada
+- [x] Fase A1 completada
+- [x] Clase 04 completada
+- [x] Laboratorio A2-01 API Diagnostic Lab completado
+- [x] Clase 05 completada
 - [x] Learning Log actualizado
-- [x] Infografías de las clases 01 y 02 incorporadas
+- [x] Infografías de las clases 01, 02, 03, 04 y 05 incorporadas
 - [x] Test avanzado de la Clase 02 completado
 - [x] Sistema documental preparado
 - [x] Rutina semanal registrada
 - [x] Repositorio publicado en GitHub
-- [ ] Clase 03 — Laboratorio de evaluación de respuestas
+- [ ] Clase 06 — JSON: estructura, tipos de datos y validación
 
 ## Autor
 
