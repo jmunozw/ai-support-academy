@@ -620,3 +620,234 @@ También comprendí que un JSON malformado debería producir normalmente `400 Ba
 ### Próxima acción
 
 Completar la **Clase 06 — JSON: estructura, tipos de datos y validación**.
+
+---
+
+## Entrada 007 — JSON: estructura, tipos de datos y validación
+
+**Fecha:** 2026-09-04
+**Clase:** 06 — JSON: estructura, tipos de datos y validación
+**Laboratorio:** A2-02 — JSON Diagnostic Lab
+**Fase:** A2 — HTTP, APIs y JSON
+**Estado:** Completada
+**Evaluación:** Superada tras recuperación guiada
+**Entorno:** Windows PowerShell 5.1
+
+### Qué he aprendido
+
+- Reconocer las partes de un documento JSON: objetos, arrays, claves y valores.
+- Identificar los tipos `string`, `number`, `boolean`, `null`, `object` y `array`.
+- Recorrer estructuras anidadas y expresar rutas como `device.policies[1].errors[0]`.
+- Recordar que los índices de un array comienzan en cero.
+- Diferenciar una propiedad con valor `null`, una colección vacía `[]` y una propiedad inexistente.
+- Reconocer errores de comillas, comas, llaves, corchetes y literales.
+- Distinguir entre sintaxis válida, cumplimiento del contrato y coherencia de los datos.
+- Convertir texto JSON a un objeto de PowerShell mediante `ConvertFrom-Json`.
+- Modificar propiedades y generar JSON mediante `ConvertTo-Json -Depth 5`.
+- Capturar errores de análisis mediante `try/catch` y `-ErrorAction Stop`.
+- Redactar un diagnóstico técnico basándome únicamente en la evidencia disponible.
+
+### Tipos de datos JSON
+
+```json
+{
+  "ticket_id": 1842,
+  "status": "open",
+  "tags": ["m365", "login"],
+  "resolved": false,
+  "assigned_to": null,
+  "user": {
+    "name": "Laura"
+  }
+}
+```
+
+Correspondencias principales:
+
+```text
+"open"                 → string
+1842                   → number
+false                  → boolean
+null                   → ausencia de valor
+{ "name": "Laura" }   → object
+["m365", "login"]     → array
+```
+
+### Objetos y arrays anidados
+
+En una respuesta de gestión de dispositivos localicé los siguientes valores:
+
+```text
+device.device_id              → LAP-027
+device.owner.name             → Laura
+device.policies[1].status     → failed
+device.policies[1].errors[0]  → 0x8024402C
+```
+
+Aprendizaje de recuperación:
+
+```text
+errors.code       → ruta incompleta porque errors es un array
+errors[0].code    → ruta correcta hacia code en el primer objeto
+```
+
+### `null`, array vacío y propiedad inexistente
+
+```json
+{
+  "department": null,
+  "errors": []
+}
+```
+
+- `department` existe, pero no tiene un valor asignado.
+- `errors` existe y contiene una colección con cero elementos.
+- Una propiedad inexistente no forma parte del documento.
+
+En PowerShell comprobé la diferencia:
+
+```powershell
+$response.device.owner.PSObject.Properties.Name -contains "department"
+# True
+
+$response.PSObject.Properties.Name -contains "devide"
+# False
+```
+
+La prueba surgió después de escribir accidentalmente `devide` en lugar de `device`. Ambas consultas parecían vacías, pero la inspección de propiedades confirmó que una clave existía con valor nulo y la otra no existía.
+
+### JSON malformado
+
+Probé una estructura sin la coma obligatoria entre propiedades:
+
+```json
+{
+  "device_id": "LAP-027"
+  "managed": true
+}
+```
+
+La conversión se ejecutó dentro de un bloque `try/catch`:
+
+```powershell
+try {
+    $null = $invalidJson | ConvertFrom-Json -ErrorAction Stop
+    Write-Host "JSON VALIDO"
+}
+catch {
+    Write-Host "JSON INVALIDO"
+    Write-Host $_.Exception.Message
+}
+```
+
+Resultado observado:
+
+```text
+JSON INVALIDO
+Se ha pasado un objeto no válido. Se esperaba ':' o '}'.
+```
+
+### Sintaxis, contrato y coherencia
+
+Aprendí a separar tres comprobaciones:
+
+1. **Sintaxis:** el texto puede analizarse como JSON.
+2. **Contrato:** aparecen las claves y los tipos que espera la API.
+3. **Coherencia:** los valores no se contradicen entre sí.
+
+Ejemplo:
+
+```json
+{
+  "success": "false",
+  "status_code": 200,
+  "errors": {
+    "code": "TOKEN_EXPIRED",
+    "retryable": "true"
+  },
+  "data": []
+}
+```
+
+El documento es sintácticamente válido, pero contiene tipos incompatibles con el contrato y una contradicción entre un estado de éxito `200` y el error `TOKEN_EXPIRED`.
+
+Versión corregida para un token expirado:
+
+```json
+{
+  "request_id": "req-2001",
+  "success": false,
+  "status_code": 401,
+  "errors": [
+    {
+      "code": "TOKEN_EXPIRED",
+      "retryable": true
+    }
+  ],
+  "data": null
+}
+```
+
+### Conversión y comprobación de ida y vuelta
+
+Después de cambiar el estado de Windows Update a `compliant`, ejecuté:
+
+```powershell
+$finalJson = $response | ConvertTo-Json -Depth 5 -Compress
+$check = $finalJson | ConvertFrom-Json
+$check.device.policies[1].status
+```
+
+Resultado:
+
+```text
+compliant
+```
+
+La prueba confirmó este recorrido:
+
+```text
+JSON → PSCustomObject → modificación → JSON → PSCustomObject
+```
+
+### Diagnóstico aplicado
+
+```text
+La solicitud req-2001 ha fallado con el código 401 y el error TOKEN_EXPIRED.
+El token de autenticación ha expirado, por lo que se debe renovar o iniciar
+sesión nuevamente antes de repetir la petición.
+```
+
+### Resultados
+
+- Primera lectura de tipos y rutas: **4/5**.
+- Corrección de un JSON malformado: completada.
+- Clasificación inicial de ejemplos válidos: **3/4** y recuperación correcta.
+- Navegación por objetos y arrays: completada.
+- Validación mediante `try/catch`: completada.
+- Conversión con PowerShell: completada.
+- Comprobación final de ida y vuelta: `compliant`.
+- Validación de contrato y coherencia: consolidada tras recuperación guiada.
+- Diagnóstico técnico final: correcto.
+
+### Evidencias creadas
+
+- Documento completo de la Clase 06.
+- Laboratorio A2-02 — JSON Diagnostic Lab.
+- Cuatro archivos JSON para sintaxis, contrato y corrección.
+- Script reutilizable de validación compatible con PowerShell 5.1.
+- Tres registros de evidencias obtenidas durante la práctica.
+- Infografía de estructura, tipos y validación JSON.
+- Actualización de `README.md`, `PROGRESO.md` y este Learning Log.
+
+### Conceptos consolidados
+
+> Las comillas cambian el tipo: `false` es un booleano; `"false"` es una cadena.
+
+> Un JSON puede ser sintácticamente válido y seguir siendo incorrecto para una API.
+
+> Una observación es una evidencia; la causa continúa siendo una hipótesis hasta verificarla.
+
+### Próxima acción
+
+Completar la **Clase 07 — Postman y diagnóstico de peticiones**.

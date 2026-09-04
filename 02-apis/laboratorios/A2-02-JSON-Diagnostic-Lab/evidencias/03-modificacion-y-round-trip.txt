@@ -1,0 +1,33 @@
+A2-02 — JSON Diagnostic Lab
+Evidencia 03 — Modificación y comprobación de ida y vuelta
+Fecha: 04/09/2026
+Entorno: Windows PowerShell 5.1.26100.9168
+
+MODIFICACIÓN
+$response.device.policies[1].status = "compliant"
+$response.device.policies[1].errors = @()
+
+COMPROBACIÓN
+$response.device.policies | Select-Object name, status
+
+name           status
+----           ------
+BitLocker      compliant
+Windows Update compliant
+
+SERIALIZACIÓN
+$finalJson = $response | ConvertTo-Json -Depth 5 -Compress
+
+NUEVA CONVERSIÓN
+$check = $finalJson | ConvertFrom-Json
+$check.device.policies[1].status
+
+RESULTADO OBSERVADO
+compliant
+
+RECORRIDO VERIFICADO
+JSON → PSCustomObject → modificación → JSON → PSCustomObject
+
+CONCLUSIÓN
+El valor anidado modificado se conservó después de serializar y volver a
+convertir el documento.

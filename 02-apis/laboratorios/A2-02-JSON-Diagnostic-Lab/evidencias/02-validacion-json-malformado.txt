@@ -1,0 +1,28 @@
+A2-02 — JSON Diagnostic Lab
+Evidencia 02 — Validación de JSON malformado
+Fecha: 04/09/2026
+Entorno: Windows PowerShell 5.1.26100.9168
+
+ENTRADA
+{
+  "device_id": "LAP-027"
+  "managed": true
+}
+
+MÉTODO
+ConvertFrom-Json -ErrorAction Stop dentro de try/catch
+
+RESULTADO OBSERVADO
+JSON INVALIDO
+Se ha pasado un objeto no válido. Se esperaba ':' o '}'. (30): {
+  "device_id": "LAP-027"
+  "managed": true
+}
+
+CAUSA CONFIRMADA
+Falta una coma entre las propiedades device_id y managed.
+
+INTERPRETACIÓN
+El documento no puede convertirse porque incumple la sintaxis JSON. El mensaje
+del analizador señala dónde dejó de interpretar la entrada; la revisión del
+contenido permite identificar la coma ausente.

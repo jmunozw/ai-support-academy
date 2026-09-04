@@ -1,0 +1,24 @@
+{
+  "device": {
+    "device_id": "LAP-027",
+    "managed": true,
+    "owner": {
+      "name": "Laura",
+      "department": null
+    },
+    "policies": [
+      {
+        "name": "BitLocker",
+        "status": "compliant",
+        "errors": []
+      },
+      {
+        "name": "Windows Update",
+        "status": "failed",
+        "errors": [
+          "0x8024402C"
+        ]
+      }
+    ]
+  }
+}

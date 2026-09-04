@@ -1,0 +1,54 @@
+A2-02 — JSON Diagnostic Lab
+Evidencia 01 — Conversión y navegación
+Fecha: 04/09/2026
+Entorno: Windows PowerShell 5.1.26100.9168
+
+COMANDO
+$response = $json | ConvertFrom-Json
+
+COMANDO
+$response.GetType().FullName
+
+RESULTADO
+System.Management.Automation.PSCustomObject
+
+COMANDOS Y RESULTADOS
+$response.device.device_id
+LAP-027
+
+$response.device.managed
+True
+
+$response.device.owner.name
+Laura
+
+$response.device.owner.department
+[sin salida: la propiedad existe y contiene $null]
+
+$response.device.policies[1].status
+failed
+
+$response.device.policies[1].errors[0]
+0x8024402C
+
+$response.device.policies | Select-Object name, status
+
+name           status
+----           ------
+BitLocker      compliant
+Windows Update failed
+
+INCIDENCIA DETECTADA DURANTE LA PRÁCTICA
+$response.devide.device_id
+[sin salida: devide no existe]
+
+COMPROBACIÓN
+$response.device.owner.PSObject.Properties.Name -contains "department"
+True
+
+$response.PSObject.Properties.Name -contains "devide"
+False
+
+INTERPRETACIÓN
+Una salida vacía puede proceder de una propiedad con valor $null o de una ruta
+incorrecta. La existencia de la propiedad debe comprobarse antes de concluir.

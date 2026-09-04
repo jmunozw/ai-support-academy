@@ -4,7 +4,7 @@
 **Objetivo profesional:** AI Support & Operations Specialist  
 **Estado general:** En formación  
 **Fase actual:** A2 — HTTP, APIs y JSON
-**Última actualización:** 26 de agosto de 2026
+**Última actualización:** 4 de septiembre de 2026
 
 ---
 
@@ -14,7 +14,7 @@
 |---|---|---:|---:|
 | A0 | Organización del proyecto | Completada | 100% |
 | A1 | Fundamentos de IA | Completada | 100% |
-| A2 | HTTP, APIs y JSON | En progreso | Clases 04 y 05 completadas — 40% |
+| A2 | HTTP, APIs y JSON | En progreso | Clases 04, 05 y 06 completadas — 60% |
 | A3 | Python para AI Support | Pendiente | 0% |
 | A4 | Prompt Engineering operativo | Pendiente | 0% |
 | A5 | LLM Operations | Pendiente | 0% |
@@ -136,13 +136,13 @@ Idea operativa consolidada:
 ## Fase A2 — HTTP, APIs y JSON
 
 **Estado:** en progreso 🚧  
-**Progreso:** 2 de 5 clases completadas — laboratorio A2-01 completado
+**Progreso:** 3 de 5 clases completadas — laboratorios A2-01 y A2-02 completados
 
 ### Plan de clases
 
 - [x] Clase 04 — Internet, HTTP y cómo hablan las aplicaciones
 - [x] Clase 05 — APIs REST: anatomía de peticiones y respuestas HTTP
-- [ ] Clase 06 — JSON: estructura, tipos de datos y validación
+- [x] Clase 06 — JSON: estructura, tipos de datos y validación
 - [ ] Clase 07 — Postman y diagnóstico de peticiones
 - [ ] Clase 08 — Diagnóstico integral de APIs
 
@@ -254,6 +254,78 @@ Ideas operativas consolidadas:
 
 ---
 
+### Laboratorio A2-02 — JSON Diagnostic Lab
+
+**Estado:** completado ✅
+**Fecha:** 4 de septiembre de 2026
+**Entorno:** Windows PowerShell 5.1
+
+Pruebas realizadas:
+
+- conversión de una respuesta JSON a `PSCustomObject` mediante `ConvertFrom-Json`;
+- acceso a objetos, arrays y valores anidados;
+- comprobación de una propiedad presente con valor `$null` frente a una propiedad inexistente;
+- captura de un JSON malformado mediante `try/catch` y `-ErrorAction Stop`;
+- modificación de un objeto convertido;
+- serialización mediante `ConvertTo-Json -Depth 5`;
+- comprobación de ida y vuelta entre JSON y PowerShell.
+
+Resultado final verificado:
+
+```text
+JSON → PSCustomObject → modificación → JSON → PSCustomObject
+Estado recuperado: compliant
+```
+
+Aprendizaje principal:
+
+> Que un JSON pueda convertirse no garantiza que respete el contrato de la API ni que sus valores sean coherentes entre sí.
+
+---
+
+### Clase 06 — JSON: estructura, tipos de datos y validación
+
+**Estado:** completada ✅
+**Evaluación:** superada tras recuperación guiada
+
+Conceptos trabajados:
+
+- estructura de un documento JSON;
+- claves, valores y parejas clave–valor;
+- tipos `string`, `number`, `boolean`, `null`, `object` y `array`;
+- objetos y arrays anidados;
+- acceso conceptual mediante rutas como `device.policies[1].errors[0]`;
+- diferencia entre `null`, un array vacío `[]` y una propiedad inexistente;
+- reglas de comillas, comas, llaves, corchetes y literales;
+- JSON válido frente a JSON malformado;
+- sintaxis, contrato de datos y coherencia lógica;
+- conversión con `ConvertFrom-Json` y `ConvertTo-Json`;
+- importancia de `-Depth 5` al serializar estructuras anidadas;
+- diagnóstico basado en evidencias sin convertir una hipótesis en causa confirmada.
+
+Resultados:
+
+- primera lectura de tipos y rutas: **4/5**, con corrección de `errors[0].code`;
+- JSON malformado corregido correctamente;
+- clasificación inicial de ejemplos: **3/4**, con recuperación de la regla de claves entre comillas dobles;
+- laboratorio PowerShell completado sin errores;
+- propiedad nula y propiedad inexistente diferenciadas mediante `PSObject.Properties.Name`;
+- error de análisis capturado en un JSON sin la coma obligatoria;
+- estado de Windows Update modificado de `failed` a `compliant`;
+- conversión de ida y vuelta confirmada con resultado `compliant`;
+- validación de tipos y coherencia consolidada mediante recuperación guiada;
+- diagnóstico final del caso `401 TOKEN_EXPIRED` redactado correctamente.
+
+Ideas operativas consolidadas:
+
+> Las comillas cambian el tipo: `false` es un booleano, pero `"false"` es una cadena.
+
+> Un documento puede ser JSON válido y, aun así, incumplir el contrato de la API.
+
+> Un campo presente con `null`, una colección vacía `[]` y una propiedad inexistente representan situaciones diferentes.
+
+---
+
 ## Rutina semanal oficial
 
 Trabajaré en la academia tres días por semana:
@@ -327,6 +399,11 @@ No será necesario producir todas las evidencias en cada sesión.
 | 26/08/2026 | A2 | Evaluación final de la Clase 05 | 4/5 + recuperación correcta |
 | 26/08/2026 | A2 | Análisis de cabeceras y tiempos HTTP | Completado |
 | 26/08/2026 | A2 | Infografía de APIs REST y HTTP | Completada |
+| 04/09/2026 | A2 | Clase 06 — JSON: estructura, tipos de datos y validación | Completada con recuperación guiada |
+| 04/09/2026 | A2 | Laboratorio A2-02 — JSON Diagnostic Lab | Completado en PowerShell 5.1 |
+| 04/09/2026 | A2 | Validación de JSON malformado con `try/catch` | Completada |
+| 04/09/2026 | A2 | Conversión JSON–PowerShell–JSON | Resultado final `compliant` |
+| 04/09/2026 | A2 | Infografía de estructura y validación JSON | Completada |
 
 ---
 
@@ -345,11 +422,11 @@ Cada viernes responderé:
 
 ## Próxima acción
 
-Completar la **Clase 06 — JSON: estructura, tipos de datos y validación**:
+Completar la **Clase 07 — Postman y diagnóstico de peticiones**:
 
-1. identificar los tipos de datos disponibles en JSON;
-2. diferenciar objetos y arrays anidados;
-3. acceder a valores dentro de una respuesta;
-4. reconocer JSON válido y JSON malformado;
-5. interpretar respuestas reales de una API;
-6. documentar errores de estructura y validación.
+1. instalar o comprobar Postman;
+2. crear una colección de peticiones reproducibles;
+3. configurar métodos, endpoints, cabeceras y cuerpos JSON;
+4. utilizar variables para evitar repetir valores;
+5. interpretar códigos, cuerpos y tiempos;
+6. provocar y documentar errores de autenticación, ruta y límite de peticiones.
